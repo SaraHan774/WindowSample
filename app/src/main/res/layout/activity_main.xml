@@ -21,105 +21,97 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <CheckBox
         android:id="@+id/toggle_decor_fit_system_windows"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:elevation="1dp"
+        android:layout_marginTop="32dp"
         android:text="@string/decor_fit_system_windows"
-        app:layout_constraintBottom_toTopOf="@id/toggle_caption_bar"
+        app:layout_constraintBottom_toTopOf="@+id/toggle_caption_bar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
         android:id="@+id/toggle_caption_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:elevation="1dp"
         android:text="@string/caption_bar"
-        app:layout_constraintBottom_toTopOf="@id/toggle_ime"
+        app:layout_constraintBottom_toTopOf="@+id/toggle_tappable_element"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed" />
-
-    <CheckBox
-        android:id="@+id/toggle_ime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:elevation="1dp"
-        android:text="@string/ime"
-        app:layout_constraintBottom_toTopOf="@id/toggle_mandatory_system_gestures"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toggle_caption_bar" />
-
-    <CheckBox
-        android:id="@+id/toggle_mandatory_system_gestures"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:elevation="1dp"
-        android:text="@string/mandatory_system_gestures"
-        app:layout_constraintBottom_toTopOf="@id/toggle_status_bars"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toggle_ime" />
-
-    <CheckBox
-        android:id="@+id/toggle_status_bars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:elevation="1dp"
-        android:text="@string/status_bars"
-        app:layout_constraintBottom_toTopOf="@id/toggle_system_bars"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toggle_mandatory_system_gestures" />
-
-    <CheckBox
-        android:id="@+id/toggle_system_bars"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:elevation="1dp"
-        android:text="@string/system_bars"
-        app:layout_constraintBottom_toTopOf="@id/toggle_system_gestures"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toggle_status_bars" />
-
-    <CheckBox
-        android:id="@+id/toggle_system_gestures"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="8dp"
-        android:elevation="1dp"
-        android:text="@string/system_gestures"
-        app:layout_constraintBottom_toTopOf="@id/toggle_tappable_element"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toggle_system_bars" />
+        app:layout_constraintTop_toBottomOf="@+id/toggle_decor_fit_system_windows" />
 
     <CheckBox
         android:id="@+id/toggle_tappable_element"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp"
         android:elevation="1dp"
         android:text="@string/tappable_element"
+        app:layout_constraintBottom_toTopOf="@+id/toggle_mandatory_system_gestures"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_caption_bar" />
+
+    <CheckBox
+        android:id="@+id/toggle_mandatory_system_gestures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:text="@string/mandatory_system_gestures"
+        app:layout_constraintBottom_toTopOf="@+id/toggle_status_bars"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_tappable_element" />
+
+    <CheckBox
+        android:id="@+id/toggle_status_bars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:text="@string/status_bars"
+        app:layout_constraintBottom_toTopOf="@+id/toggle_system_bars"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_mandatory_system_gestures" />
+
+    <CheckBox
+        android:id="@+id/toggle_system_bars"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:text="@string/system_bars"
+        app:layout_constraintBottom_toTopOf="@+id/toggle_system_gestures"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_status_bars" />
+
+    <CheckBox
+        android:id="@+id/toggle_system_gestures"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:text="@string/system_gestures"
+        app:layout_constraintBottom_toTopOf="@+id/toggle_ime"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toggle_system_bars" />
+
+    <CheckBox
+        android:id="@+id/toggle_ime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:elevation="1dp"
+        android:text="@string/ime"
         app:layout_constraintBottom_toTopOf="@+id/edit_text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toggle_system_gestures" />
+        app:layout_constraintTop_toBottomOf="@+id/toggle_system_gestures" />
 
     <TextView
         android:id="@+id/edit_text_label"
@@ -127,10 +119,9 @@
         android:layout_height="wrap_content"
         android:labelFor="@id/edit_text"
         android:text="@string/input_label"
-        app:layout_constraintBaseline_toBaselineOf="@id/edit_text"
+        app:layout_constraintBottom_toBottomOf="@+id/edit_text"
         app:layout_constraintEnd_toStartOf="@id/edit_text"
-        app:layout_constraintHorizontal_chainStyle="packed"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/edit_text" />
 
     <androidx.constraintlayout.widget.Group
         android:id="@+id/inset_types"
@@ -142,29 +133,28 @@
         android:id="@+id/edit_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
         android:elevation="1dp"
         android:importantForAutofill="no"
         android:inputType="text"
         android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@id/edit_text_label"
-        app:layout_constraintTop_toBottomOf="@id/toggle_tappable_element" />
+        app:layout_constraintEnd_toEndOf="@+id/toggle_ime"
+        app:layout_constraintTop_toBottomOf="@id/toggle_ime"
+        />
 
     <com.google.android.material.divider.MaterialDivider
         android:id="@+id/divider"
         android:layout_width="match_parent"
         android:layout_height="2dp"
-        app:layout_constraintTop_toBottomOf="@id/edit_text" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text" />
 
     <CheckBox
         android:id="@+id/hide_system_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/hide_system_bars"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/divider" />
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

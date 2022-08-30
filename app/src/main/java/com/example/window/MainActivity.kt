@@ -60,6 +60,8 @@ class MainActivity : AppCompatActivity() {
         binding.toggleTappableElement.addChangeListener(WindowInsetsCompat.Type.tappableElement())
 
         val controller = WindowCompat.getInsetsController(window, binding.root)
+        // Just to disable re-showing system bars on touch
+        controller.systemBarsBehavior = WindowInsetsControllerCompat.BEHAVIOR_SHOW_BARS_BY_SWIPE
         binding.hideSystemBar.setOnCheckedChangeListener { _, checked ->
             if (checked) controller.hide(WindowInsetsCompat.Type.systemBars())
             else controller.show(WindowInsetsCompat.Type.systemBars())
